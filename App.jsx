@@ -1,15 +1,28 @@
 import React from 'react'
-import Header from './components/header'
-import Main from './components/Main'
-import Footer from './components/Footer'
-import List from './components/List'
+
 const App = () => {
+ const obj = [{
+
+  name: 'Manoj',
+
+  age: 25,
+  city: 'Bangalore'
+  
+
+ }, {
+  name: 'japu',
+  age:24,
+  city: 'jaipur'
+
+  }]
+
   return (
-    <div >
-     {/* <Header/> */}
-     <Main/>
-     <Footer/>
-     <List/>
+    <div className="list">
+  
+       <div>{obj.name}</div>
+       <div>{obj.age}</div>
+       <div>{obj.city}</div>
+            <div>{obj.map((item) => <div> {item.name} {item.age} {item.city}</div>)}</div>
     </div>
   )
 }
